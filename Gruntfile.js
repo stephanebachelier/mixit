@@ -1,5 +1,5 @@
 /*global module:false*/
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   // Project configuration.
@@ -43,6 +43,14 @@ module.exports = function(grunt) {
         src: ['lib/**/*.js', 'test/**/*.js']
       }
     },
+    jscs: {
+      libtest: {
+        src: '<%= jshint.libtest.src %>'
+      },
+      gruntfile: {
+        src: 'Gruntfile.js'
+      }
+    },
     nodeunit: {
       files: ['test/**/*_test.js']
     },
@@ -62,6 +70,6 @@ module.exports = function(grunt) {
 
   // Default task.
   //grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify']);
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'jscs', 'concat', 'uglify']);
 
 };
