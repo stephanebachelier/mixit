@@ -1,0 +1,39 @@
+{
+  "name": "mixit",
+  "version": "0.0.0",
+  "description": "a smart mixin helper method to provide object propery mixin",
+  "main": "dist/mixit.js",
+  "dependencies": {
+    "underscore": "~1.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephanebachelier/mixit.git"
+  },
+  "keywords": [
+    "underscore",
+    "mixin"
+  ],
+  "author": "Stéphane Bachelier <stephane.bachelier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephanebachelier/mixit/issues"
+  },
+  "homepage": "https://github.com/stephanebachelier/mixit",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "load-grunt-tasks": "^0.4.0",
+    "jshint-stylish": "^0.2.0"
+  }
+}
