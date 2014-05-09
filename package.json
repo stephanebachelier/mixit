@@ -35,6 +35,7 @@
     "grunt-contrib-uglify": "~0.2.7",
     "load-grunt-tasks": "^0.4.0",
     "jshint-stylish": "^0.2.0",
-    "grunt-jscs-checker": "^0.4.3"
+    "grunt-jscs-checker": "^0.4.3",
+    "grunt-lintspaces": "^0.5.1"
   }
 }

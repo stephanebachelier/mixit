@@ -51,17 +51,31 @@ module.exports = function (grunt) {
         src: 'Gruntfile.js'
       }
     },
+    lintspaces: {
+      options: {
+        editorconfig: '.editorconfig'
+      },
+      gruntfile: {
+        src: ['Gruntfile.js']
+      },
+      libtest: {
+        src: ['lib/**/*.js']
+      },
+      test: {
+        src: ['test/**/*_test.js']
+      }
+    },
     nodeunit: {
       files: ['test/**/*_test.js']
     },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+        tasks: ['jshint:gruntfile', 'jscs:gruntfile', 'lintspaces:gruntfile']
       },
       libtest: {
         files: '<%= jshint.libtest.src %>',
-        tasks: ['jshint:libtest', 'nodeunit']
+        tasks: ['jshint:libtest', 'jscs:libtest', 'lintspaces:libtest', 'nodeunit']
       }
     }
   });
@@ -70,6 +84,6 @@ module.exports = function (grunt) {
 
   // Default task.
   //grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify']);
-  grunt.registerTask('default', ['jshint', 'jscs', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'jscs', 'lintspaces', 'concat', 'uglify']);
 
 };
