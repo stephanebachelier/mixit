@@ -59,14 +59,21 @@ module.exports = function (grunt) {
         src: ['Gruntfile.js']
       },
       libtest: {
-        src: ['lib/**/*.js']
-      },
-      test: {
-        src: ['test/**/*_test.js']
+        src: ['lib/**/*.js', 'tests/*.spec.js']
       }
     },
-    nodeunit: {
-      files: ['test/**/*_test.js']
+    simplemocha: {
+      options: {
+        globals: ['should'],
+        timeout: 3000,
+        ignoreLeaks: false,
+        ui: 'bdd',
+        reporter: 'tap'
+      },
+
+      all: {
+        src: ['tests/*.spec.js']
+      }
     },
     watch: {
       gruntfile: {
@@ -83,7 +90,6 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task.
-  //grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify']);
-  grunt.registerTask('default', ['jshint', 'jscs', 'lintspaces', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'jscs', 'lintspaces', 'simplemocha', 'concat', 'uglify']);
 
 };
