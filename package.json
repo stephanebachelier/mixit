@@ -1,6 +1,6 @@
 {
   "name": "mixit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a smart mixin helper method to provide object propery mixin",
   "main": "dist/mixit.js",
   "dependencies": {
