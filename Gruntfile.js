@@ -84,6 +84,16 @@ module.exports = function (grunt) {
         files: '<%= jshint.libtest.src %>',
         tasks: ['jshint:libtest', 'jscs:libtest', 'lintspaces:libtest', 'nodeunit']
       }
+    },
+    'release-it': {
+      options: {
+        pkgFiles: ['package.json', 'bower.json'],
+        commitMessage: 'bump release %s',
+        tagName: '%s',
+        tagAnnotation: 'Release %s',
+        buildCommand: false,
+        publish: true
+      }
     }
   });
 

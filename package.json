@@ -38,6 +38,7 @@
     "grunt-jscs-checker": "^0.4.3",
     "grunt-lintspaces": "^0.5.1",
     "grunt-simple-mocha": "^0.4.0",
-    "should": "^3.3.1"
+    "should": "^3.3.1",
+    "grunt-release-it": "^0.1.1"
   }
 }
