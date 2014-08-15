@@ -100,13 +100,7 @@ module.exports = function (grunt) {
         src: 'lib/<%= pkg.name %>.js',
         dest: '<%= concat.dist.dest %>',
         indent: '  ',
-        objectToExport: 'mixit',
-        deps: {
-          default: ['underscore'],
-          amd: ['underscore'],
-          cjs: ['underscore'],
-          global: ['underscore']
-        }
+        objectToExport: 'mixit'
       }
     }
   });
