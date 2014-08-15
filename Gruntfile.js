@@ -20,6 +20,10 @@ module.exports = function (grunt) {
       dist: {
         src: ['dist/<%= pkg.name %>.js'],
         dest: 'dist/<%= pkg.name %>.js'
+      },
+      closure: {
+        src: ['lib/<%= pkg.name %>.js'],
+        dest: 'dist/<%= pkg.name %>.closure.js'
       }
     },
     uglify: {
@@ -29,6 +33,10 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= concat.dist.dest %>',
         dest: 'dist/<%= pkg.name %>.min.js'
+      },
+      closure: {
+        src: '<%= concat.closure.dest %>',
+        dest: 'dist/<%= pkg.name %>.closure.min.js'
       }
     },
     jshint: {
