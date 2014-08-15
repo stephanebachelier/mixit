@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "a smart mixin helper method to provide object propery mixin",
   "main": "dist/mixit.js",
-  "dependencies": {
-    "underscore": "~1.6.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
