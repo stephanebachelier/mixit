@@ -1,7 +1,7 @@
 {
   "name": "mixit",
   "version": "0.3.1",
-  "description": "a smart mixin helper method to provide object propery mixin",
+  "description": "a smart mixin/merging object helper",
   "main": "dist/mixit.js",
   "scripts": {
     "test": "grunt test"

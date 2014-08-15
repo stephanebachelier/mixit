@@ -6,7 +6,7 @@
   "authors": [
     "Stéphane Bachelier <stephane.bachelier@gmail.com>"
   ],
-  "description": "a smart mixin helper method to provide object propery mixin",
+  "description": "a smart mixin/merging object helper",
   "moduleType": [
     "amd",
     "globals",

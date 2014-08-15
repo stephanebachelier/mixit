@@ -1,6 +1,6 @@
 # mixit
 
-a smart mixin helper method to provide object property mixin.
+a smart mixin/merging object helper.
 
 ## Why ?
 
