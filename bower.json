@@ -1,7 +1,7 @@
 {
   "name": "mixit",
   "main": "dist/mixit.js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/stephanebachelier/mixit",
   "authors": [
     "Stéphane Bachelier <stephane.bachelier@gmail.com>"

@@ -1,4 +1,4 @@
-/*! mixit - v0.3.0 - 2014-08-15
+/*! mixit - v0.3.1 - 2014-08-15
 * https://github.com/stephanebachelier/mixit
 * Copyright (c) 2014 ; Licensed  */
 (function (root, factory) {
