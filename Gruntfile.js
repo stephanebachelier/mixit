@@ -108,7 +108,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task.
-  grunt.registerTask('default', ['lint', 'test', 'build']);
+  grunt.registerTask('default', ['lint', 'build', 'test']);
 
   grunt.registerTask('build', ['umd:lib', 'concat', 'uglify']);
 
