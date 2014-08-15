@@ -46,4 +46,40 @@ describe('mixit unit test', function () {
     obj.foo.should.be.a.Function;
   });
 
+  it('should mix all levels', function () {
+    var obj = {
+      a: {
+        b: 1,
+        c: {
+          d: {
+            a: 'foo'
+          },
+          e: 'bar'
+        }
+      }
+    };
+
+    // manually create a simple clone of obj
+    var clone = {};
+    clone.a = obj.a;
+
+    mixit(clone, {
+      a: {
+        f: 'foo',
+        c: {
+          foo: 'bar',
+          d: {
+            c: 'thunderstruck'
+          }
+        }
+      }
+    });
+    obj.a.should.have.property('b', 1);
+    obj.a.should.have.property('f', 'foo');
+    obj.a.c.should.have.property('foo', 'bar');
+    obj.a.c.d.should.have.property('a', 'foo');
+    obj.a.c.d.should.have.property('c');
+    obj.a.c.d.c.should.eql('thunderstruck');
+
+  });
 });
