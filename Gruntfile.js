@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['lib/<%= pkg.name %>.js'],
+        src: ['dist/<%= pkg.name %>.js'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
@@ -94,12 +94,26 @@ module.exports = function (grunt) {
         buildCommand: false,
         publish: true
       }
+    },
+    umd: {
+      lib: {
+        src: 'lib/<%= pkg.name %>.js',
+        dest: '<%= concat.dist.dest %>',
+        indent: '  ',
+        objectToExport: 'mixit',
+        deps: {
+          default: ['underscore'],
+          amd: ['underscore'],
+          cjs: ['underscore'],
+          global: ['underscore']
+        }
+      }
     }
   });
 
   require('load-grunt-tasks')(grunt);
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'jscs', 'lintspaces', 'simplemocha', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'jscs', 'lintspaces', /*'simplemocha', */'umd:lib', 'concat', 'uglify']);
 
 };

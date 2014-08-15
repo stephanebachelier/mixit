@@ -28,17 +28,18 @@
   },
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-nodeunit": "^0.3.3",
     "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-nodeunit": "^0.3.3",
     "grunt-contrib-uglify": "~0.2.7",
-    "load-grunt-tasks": "^0.4.0",
-    "jshint-stylish": "^0.2.0",
+    "grunt-contrib-watch": "^0.6.1",
     "grunt-jscs-checker": "^0.4.3",
     "grunt-lintspaces": "^0.5.1",
+    "grunt-release-it": "^0.1.1",
     "grunt-simple-mocha": "^0.4.0",
-    "should": "^3.3.1",
-    "grunt-release-it": "^0.1.1"
+    "grunt-umd": "^2.0.0",
+    "jshint-stylish": "^0.2.0",
+    "load-grunt-tasks": "^0.4.0",
+    "should": "^3.3.1"
   }
 }
