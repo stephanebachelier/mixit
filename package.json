@@ -4,7 +4,7 @@
   "description": "a smart mixin helper method to provide object propery mixin",
   "main": "dist/mixit.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
