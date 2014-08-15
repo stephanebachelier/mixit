@@ -1,4 +1,4 @@
-/*! mixit - v0.2.0 - 2014-08-15
+/*! mixit - v0.3.0 - 2014-08-15
 * https://github.com/stephanebachelier/mixit
 * Copyright (c) 2014 ; Licensed  */
 (function (root, factory) {
@@ -17,12 +17,13 @@
   }
 }(this, function () {
 
-  'use strict';
-  var has = function (obj, prop) {
-    return hasOwnProperty.call(obj, prop);
-  };
+  function mixit (obj) {
+    'use strict';
   
-  var mixit = function (obj) {
+    var has = function (obj, prop) {
+      return hasOwnProperty.call(obj, prop);
+    };
+  
     var args = Array.prototype.slice.call(arguments, 1);
     var i = 0, len = args.length;
     for (;i < len; i += 1) {
@@ -43,7 +44,7 @@
       }
     }
     return obj;
-  };
+  }
   
 
   return mixit;
