@@ -82,7 +82,7 @@ module.exports = function (grunt) {
       },
       libtest: {
         files: '<%= jshint.libtest.src %>',
-        tasks: ['jshint:libtest', 'jscs:libtest', 'lintspaces:libtest', 'nodeunit']
+        tasks: ['jshint:libtest', 'jscs:libtest', 'lintspaces:libtest', 'build', 'test']
       }
     },
     'release-it': {
@@ -108,6 +108,11 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'jscs', 'lintspaces', /*'simplemocha', */'umd:lib', 'concat', 'uglify']);
+  grunt.registerTask('default', ['lint', 'test', 'build']);
 
+  grunt.registerTask('build', ['umd:lib', 'concat', 'uglify']);
+
+  grunt.registerTask('test', ['simplemocha']);
+
+  grunt.registerTask('lint', ['jshint', 'jscs', 'lintspaces']);
 };
