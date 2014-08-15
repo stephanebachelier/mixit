@@ -1,5 +1,4 @@
 var should = require('should');
-var _ = require('underscore');
 var mixit = require('../dist/mixit');
 
 describe('mixit unit test', function () {
@@ -9,8 +8,7 @@ describe('mixit unit test', function () {
       foo: 'bar'
     };
 
-    _.mixit(obj, {bar: 'foo'});
-
+    mixit(obj, {bar: 'foo'});
     obj.should.have.property('bar', 'foo');
   });
 
@@ -22,7 +20,7 @@ describe('mixit unit test', function () {
       },
     };
 
-    _.mixit(obj, {
+    mixit(obj, {
       name: {
         alias: 'foo'
       }
@@ -42,7 +40,7 @@ describe('mixit unit test', function () {
       foo: function () {}
     };
 
-    _.mixit(obj, {foo: 'bar'});
+    mixit(obj, {foo: 'bar'});
 
     obj.should.have.property('foo');
     obj.foo.should.be.a.Function;
