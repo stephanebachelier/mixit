@@ -46,7 +46,7 @@ mixit({}, a, b);
 
 ```
 
-It only needs underscore as a dependency, and as a bonus it is the helper is added to underscore under the name `mixit`, so, once loaded, this library can be use with `mixit` or `_.mixit`.
+It has no external dependency, and weight about ~1.3kB and 590B minified. With gzip compression this small library should have not any impact on the size of your site, SPA or whatever!
 
 
 
@@ -67,7 +67,6 @@ $ bower install --save mixit
 * CommonJS:
 
 ```
-var _ = require('underscore');
 var mixit = require('mixit');
 
 var obj = {
@@ -110,7 +109,6 @@ define(['mixit'], function (mixit) {
 * Browser
 
 ```
-<script src="underscore.js"></script>
 <script src="mixit.js"></script>
 <script>
   var obj = {
